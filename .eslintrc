@@ -1,0 +1,93 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb-base",
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "rules": {
+        "new-cap": "off",
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+        "radix": "off",
+
+        // Reports as error files marked as invalid by prettier
+        "prettier/prettier": [
+            "error"
+        ],
+        // Bad for readability, use destructuring when useful
+        "prefer-destructuring": 0,
+        // conflicts with curly-spacing rule
+        "object-curly-newline": 0,
+        // We have comment blocks describing arguments and we need to keep it.
+        "function-paren-newline": 0,
+        // We use the 'import' plugin which allows for cases "flow" awareness.
+        "no-duplicate-imports": 0,
+        // We use global requires in various places, e.g. code splitting instances.
+        "global-require": 0,
+        // Remove requirement to set extensions in imports
+        "import/extensions": "off",
+        // Allow non-default exports.
+        "import/prefer-default-export": 0,
+        // Importing libs no in "dependencies" triggers and error, unless test files.
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "**/*.test.js",
+                    "**/*.spec.js"
+                ]
+            }
+        ],
+        // Allow multispace only for alignment of imports, variables declaration and properties.
+        "no-multi-spaces": [
+            "error"
+        ],
+        // Allow larger lines to 120 chars.
+        "max-len": [
+            "error",
+            140,
+            2,
+            {
+                "ignoreUrls": true,
+                "ignoreComments": false,
+                "ignoreRegExpLiterals": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        // Enforces one or more spaces before or after colons in object literals.
+        "key-spacing": [
+            "error",
+            {
+                "mode": "minimum"
+            }
+        ]
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true,
+            "jsx": true
+        },
+    },
+    "globals": {
+        "window": true
+    }
+}
