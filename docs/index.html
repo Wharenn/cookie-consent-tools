@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Cookie Consent Tools</title>
+        <script type="text/javascript" src="../dist/cookie-consent-tools.min.js"></script>
+        <link rel="stylesheet" href="../dist/cookie-consent-tools.min.css"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Cookie Consent Tools</h1>
+            <div class="description">
+                Default consent box in <code>message</code> mode.
+                <a href="choice.html">See with choice mode</a>.
+            </div>
+            <div class="buttons">
+                <a href="#" id="show-box">Show Box</a>
+                <a href="#" id="hide-box">Hide Box</a>
+            </div>
+            <pre id="textZone"></pre>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+                var textZone = document.getElementById('textZone');
+                var write = function (message) {
+                    textZone.innerHTML = textZone.innerHTML + "\n" + message;
+                }
+                var cct = window.cookieConsentTools;
+                var options = {
+                    consentBox: {
+                        autoDisplay: true,
+                        onHide: function () { write('Box is hidden!') },
+                        onShow: function () { write('Box is visible!') },
+                        onOkButtonClick: function () { write('Clicked on Ok button!') },
+                        seeMoreLink: {
+                            href: '#',
+                            target: '_self',
+                        }
+                    },
+                };
+
+                cct.initialize(options);
+
+                document.getElementById('show-box').addEventListener('click', cct.consentBox.show);
+                document.getElementById('hide-box').addEventListener('click', cct.consentBox.hide);
+            });
+        </script>
+    </body>
+</html>

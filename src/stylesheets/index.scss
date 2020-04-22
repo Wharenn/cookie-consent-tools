@@ -1,14 +1,53 @@
 #consent-box {
   background: #000;
-  color: #AAA;
+  color: #aaa;
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0.9rem;
   font-size: 0.9rem;
   box-sizing: border-box;
+  display: flex;
+
+  &.hidden {
+    display: none;
+  }
 
   a {
-    color: #EEE;
+    color: #eee;
+    text-decoration: none;
+  }
+
+  .messageContainer {
+    flex-grow: 1;
+    padding: 0.9rem;
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .consentButton {
+    display: inline-block;
+    background: #007aff;
+    padding: 0.3rem 0.8rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 0.4rem;
+
+    &.decline {
+      background: #444;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+
+    .buttonContainer {
+      padding: 0.5rem 0 1rem 0;
+    }
   }
 }

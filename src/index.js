@@ -11,7 +11,9 @@ const cookieConsentTools = {
     config = Object.assign(defaultConfig, options);
 
     consentBox.initialize(config.consentBox);
-  }
+  },
+
+  consentBox,
 };
 
 window.cookieConsentTools = cookieConsentTools;

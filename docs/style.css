@@ -1,0 +1,55 @@
+body {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+}
+
+h1 {
+    background: #167afe;
+    color: white;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+a {
+    color: #222;
+}
+
+pre {
+    overflow: auto;
+    max-height: 300px;
+}
+
+pre, 
+code {
+    font-size: 1.2rem;
+    background: #DDD;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+}
+
+.description,
+.buttons,
+pre {
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.buttons a {
+    display: inline-block;
+    background: #CCC;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    color: #000;
+}
+.buttons a:hover {
+    background: #DDD;
+}
