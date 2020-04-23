@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConsentBox can be set in choice mode 1`] = `
+<div
+  id="container"
+>
+  <div
+    id="consent-box"
+  >
+    <div
+      class="messageContainer"
+    >
+      <span>
+        There is tasty cookies for you. 
+      </span>
+      <a
+        href="#"
+        target="_self"
+      >
+        Show me more!
+      </a>
+    </div>
+    <div
+      class="buttonContainer"
+    >
+      <a
+        class="consentButton decline"
+        href="#"
+      >
+        Decline
+      </a>
+      <a
+        class="consentButton approve"
+        href="#"
+      >
+        Allow Cookies
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBox can have a customized see more link 1`] = `
+<div
+  id="container"
+>
+  <div
+    id="consent-box"
+  >
+    <div
+      class="messageContainer"
+    >
+      <span>
+        This website uses cookies to provide you the best user experience. 
+      </span>
+      <a
+        href="#"
+        target="_self"
+      >
+        Show me more!
+      </a>
+    </div>
+    <div
+      class="buttonContainer"
+    >
+      <a
+        class="consentButton ok"
+        href="#"
+      >
+        Got it
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBox can have a see more link 1`] = `
+<div
+  id="container"
+>
+  <div
+    id="consent-box"
+  >
+    <div
+      class="messageContainer"
+    >
+      <span>
+        This website uses cookies to provide you the best user experience. 
+      </span>
+      <a
+        href="https://foo.bar"
+        target="_blank"
+      >
+        See more...
+      </a>
+    </div>
+    <div
+      class="buttonContainer"
+    >
+      <a
+        class="consentButton ok"
+        href="#"
+      >
+        Got it
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBox can have customized choice button messages 1`] = `
+<div
+  id="container"
+>
+  <div
+    id="consent-box"
+  >
+    <div
+      class="messageContainer"
+    >
+      <span>
+        There is tasty cookies for you. 
+      </span>
+      <a
+        href="#"
+        target="_self"
+      >
+        Show me more!
+      </a>
+    </div>
+    <div
+      class="buttonContainer"
+    >
+      <a
+        class="consentButton ok"
+        href="#"
+      >
+        Ok, close it
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBox can have customized messages 1`] = `
+<div
+  id="container"
+>
+  <div
+    id="consent-box"
+  >
+    <div
+      class="messageContainer"
+    >
+      <span>
+        There is tasty cookies for you. 
+      </span>
+      <a
+        href="#"
+        target="_self"
+      >
+        Show me more!
+      </a>
+    </div>
+    <div
+      class="buttonContainer"
+    >
+      <a
+        class="consentButton ok"
+        href="#"
+      >
+        Ok, close it
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ConsentBox with default config is visible in the expected container, without see more link, and in message mode 1`] = `
+<div
+  id="container"
+>
+  <div
+    id="consent-box"
+  >
+    <div
+      class="messageContainer"
+    >
+      <span>
+        This website uses cookies to provide you the best user experience. 
+      </span>
+    </div>
+    <div
+      class="buttonContainer"
+    >
+      <a
+        class="consentButton ok"
+        href="#"
+      >
+        Got it
+      </a>
+    </div>
+  </div>
+</div>
+`;

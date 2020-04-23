@@ -1,4 +1,4 @@
-import consentBox from './consent-box';
+import consentBox from './consent-box/consent-box';
 
 const defaultConfig = {
   consentBox: {},
