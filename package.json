@@ -8,7 +8,8 @@
     "dev": "webpack --watch --devtool eval --env.mode=development",
     "lint:js": "eslint src tests",
     "lint:scss": "stylelint src/**/*.scss",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test-all": "npm run lint:scss && npm run lint:js && npm test"
   },
   "keywords": [
     "cookie",

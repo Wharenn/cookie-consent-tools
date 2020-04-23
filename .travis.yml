@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - lts/*
+
+before_script:
+  - npm run build
+
+jobs:
+  include:
+    - stage: 'Unit Tests'
+      script: npm run test-all
