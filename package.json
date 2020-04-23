@@ -9,7 +9,8 @@
     "lint:js": "eslint src tests",
     "lint:scss": "stylelint src/**/*.scss",
     "test": "jest --coverage",
-    "test-all": "npm run lint:scss && npm run lint:js && npm test"
+    "test:all": "npm run lint:scss && npm run lint:js && npm test",
+    "coveralls": "coveralls < coverage/lcov.info"
   },
   "keywords": [
     "cookie",
@@ -27,6 +28,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
     "babel-loader": "^8.1.0",
+    "coveralls": "^3.0.13",
     "css-loader": "^3.5.2",
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",

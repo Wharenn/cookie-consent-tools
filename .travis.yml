@@ -8,4 +8,6 @@ before_script:
 jobs:
   include:
     - stage: 'Unit Tests'
-      script: npm run test-all
+      script: 
+        - npm run test:all
+        - npm run coveralls
