@@ -43,6 +43,13 @@ pre {
     text-align: center;
     margin-bottom: 1rem;
 }
+.buttons .active {
+    background: #167afe;
+    color: #fff;
+}
+.buttons .active:hover {
+    background: #1964c8;
+}
 .buttons a {
     display: inline-block;
     background: #CCC;
