@@ -1,13 +1,20 @@
 language: node_js
 node_js:
   - lts/*
-
 before_script:
   - npm run build
-
 jobs:
   include:
-    - stage: 'Unit Tests'
-      script: 
+    - stage: Unit Tests
+      script:
         - npm run test:all
         - npm run coveralls
+deploy:
+  provider: releases
+  api_key:
+    secure: jMjw8brP3Gqm+1AcdLbkKIRDxqxcvC3l6xWKcUX62LK2R3+ZbqaKuc4olm2NLlGgjOb9NZaItF8AmTwDNwCzzzf+Egv1D4qw1LkznrEs9qshD1BUx+YE8yJuCtJ7d5MlFiYsVUdqORYTg9gqgMzQoRf9o+HI2fLKvryPueH37Av9hRNAFCOjhlSSePJDY9ADEPDn5bFWhaP+NaUDtYkNKjDFMTSB+aHM/gnZklhGTRslQPBLju5xzJpFIGgi2hLzIBhxDMyY386t9k+gDvkdIwBtF1xsH9UzGzO6Z9YOvuQrvYWxMBnhIQuXBXUZ9+FDjnBH+zfu1F5gy2/LWwSO6Ns8s291nxyXCov4AXEKWzp7g3uslYnafEhQSKy39vLxffCDwQwhMqc/xz8gQ4IcFpqVzlRwv+rMJpjx/gWhojT3cwO//TO9miUEYJVXSP0EYvWCww/Zt3SZce3mgF61bS1KO2i9cMtcwEZApuuJDmvjW+KoRRiCcx25huJN25f+dsSO6vtHSw85im/CVHFXylZJbdziKsfHeLbv0putpEZs/g4rnV3RSsNniogj5IDL7V+O3tz8QyUO4rIRnDIhR+Vd4b9F9pcQWP3utqJ8fKKSXESdDiZA0Y70UdCq1v2Ss6xRVQ1EETQEZYQ53n8r729FFD4oTmm/PldVnHXLY5o=
+  file_glob: true
+  file: dist/*
+  on:
+    repo: Wharenn/cookie-consent-tools
+    tags: true
