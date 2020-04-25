@@ -10,6 +10,8 @@ const defaultConfig = {
     sameSite: 'strict',
   },
   consentBox: {},
+  onConsentLoaded: () => {},
+  onConsentUpdated: () => {},
 };
 
 let config = {};
@@ -21,7 +23,7 @@ const cookieConsentTools = {
       config.cookieAttributes = Object.assign(defaultConfig.cookieAttributes, options.cookieAttributes);
     }
 
-    cookieManager.initialize(config.cookieName, config.cookieAttributes);
+    cookieManager.initialize(config);
     consentBox.initialize(config.consentBox);
   },
 

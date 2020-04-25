@@ -39,23 +39,29 @@
                     consentBox: {
                         autoDisplay: false,
                     },
+                    onConsentLoaded: function (hasConsent) {
+                        write('onConsentLoaded: has consent? ' + hasConsent);
+                    },
+                    onConsentUpdated: function (hasConsent) {
+                        write('onConsentUpdated: has consent? ' + hasConsent);
+                    }
                 };
 
                 cct.initialize(options);
 
                 document.getElementById('reset-button').addEventListener('click', function () {
+                    write('Reseting consent');
                     cct.cookieManager.resetConsent();
-                    write('Reset consent');
                     write('document.cookie = ' + document.cookie);
                 });
                 document.getElementById('approve-button').addEventListener('click', function () {
+                    write('Giving consent');
                     cct.cookieManager.approve();
-                    write('Given consent');
                     write('document.cookie = ' + document.cookie);
                 });
                 document.getElementById('decline-button').addEventListener('click', function () {
+                    write('Revoking consent');
                     cct.cookieManager.decline();
-                    write('Revoked consent');
                     write('document.cookie = ' + document.cookie);
                 });
                 document.getElementById('has-consent-button').addEventListener('click', function () {
