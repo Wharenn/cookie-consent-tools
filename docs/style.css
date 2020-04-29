@@ -37,6 +37,10 @@ pre {
     max-width: 90%;
     margin: auto;
     margin-bottom: 1rem;
+    padding: 1rem;
+}
+pre > div {
+    margin-bottom: 5px;
 }
 
 .buttons {
@@ -59,4 +63,14 @@ pre {
 }
 .buttons a:hover {
     background: #DDD;
+}
+.label {
+    display: inline-block;
+    background: #444;
+    color: #FFF;
+    padding: 0.1rem 0.5rem;
+    border-radius: 3px;
+}
+.label.blue {
+    background: #177afd;
 }

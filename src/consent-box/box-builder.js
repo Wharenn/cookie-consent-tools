@@ -1,3 +1,5 @@
+import cookieManager from '../cookie-manager';
+
 const getBoxElement = () => {
   return document.getElementById('consent-box');
 };
@@ -14,11 +16,10 @@ const hide = () => {
   getBoxElement().classList.add('hidden');
 };
 
-const createButton = (text, onClick) => {
+const createButton = (text) => {
   const button = document.createElement('a');
   button.setAttribute('href', '#');
   button.classList.add('consentButton');
-  button.addEventListener('click', onClick);
   button.appendChild(document.createTextNode(text));
 
   return button;
@@ -57,20 +58,26 @@ const build = (config) => {
 
   const buttons = [];
   if (options.type === 'choice') {
-    const approveButton = createButton(options.messages.approveButton, hideFunction);
+    const approveButton = createButton(options.messages.approveButton);
     approveButton.classList.add('approve');
     approveButton.addEventListener('click', options.onApproveButtonClick);
+    approveButton.addEventListener('click', cookieManager.approve);
+    approveButton.addEventListener('click', hideFunction);
 
-    const declineButton = createButton(options.messages.declineButton, hideFunction);
+    const declineButton = createButton(options.messages.declineButton);
     declineButton.classList.add('decline');
     declineButton.addEventListener('click', options.onDeclineButtonClick);
+    declineButton.addEventListener('click', cookieManager.decline);
+    declineButton.addEventListener('click', hideFunction);
 
     buttons.push(declineButton);
     buttons.push(approveButton);
   } else {
-    const okButton = createButton(options.messages.okButton, hideFunction);
+    const okButton = createButton(options.messages.okButton);
     okButton.classList.add('ok');
     okButton.addEventListener('click', options.onOkButtonClick);
+    okButton.addEventListener('click', cookieManager.approve);
+    okButton.addEventListener('click', hideFunction);
 
     buttons.push(okButton);
   }

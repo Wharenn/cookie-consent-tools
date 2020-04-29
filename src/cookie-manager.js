@@ -42,21 +42,21 @@ export default {
     return Cookies.get(cookieName) === 'approve';
   },
   resetConsent: () => {
-    triggerEvent('updated', null);
-
     const { path, domain } = cookieAttributes;
 
     Cookies.remove(cookieName, { path: path || '/', domain });
+
+    triggerEvent('updated', null);
   },
   approve: () => {
-    triggerEvent('updated', 'approve');
-
     Cookies.set(cookieName, 'approve', cookieAttributes);
+
+    triggerEvent('updated', 'approve');
   },
   decline: () => {
-    triggerEvent('updated', 'decline');
-
     Cookies.set(cookieName, 'decline', cookieAttributes);
+
+    triggerEvent('updated', 'decline');
   },
   addEventListener: (event, handler) => {
     if (!eventListeners[event]) {
