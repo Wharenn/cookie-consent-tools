@@ -11,30 +11,27 @@
     <body>
         <div id="container">
             <h1>Cookie Consent Tools</h1>
+            <div class="buttons">
+                <a href="index.html">Message Mode</a>
+                <a href="choice.html" class="active">Choice Mode</a>
+                <a href="headless.html">Headless (no banner)</a>
+            </div>
             <div class="description">
                 Default consent box in <code>choice</code> mode.
-                <a href="index.html">See with message mode</a>.
             </div>
             <div class="buttons">
+                <a href="#" id="reset-button">Reset consent</a>
                 <a href="#" id="show-box">Show Box</a>
                 <a href="#" id="hide-box">Hide Box</a>
             </div>
             <pre id="textZone"></pre>
         </div>
+        <script type="text/javascript" src="script.js"></script>
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', () => {
-                var textZone = document.getElementById('textZone');
-                var write = function (message) {
-                    textZone.innerHTML = textZone.innerHTML + "\n" + message;
-                }
-                var cct = window.cookieConsentTools;
                 var options = {
                     consentBox: {
                         type: 'choice',
-                        onHide: function () { write('Box is hidden!') },
-                        onShow: function () { write('Box is visible!') },
-                        onApproveButtonClick: function () { write('Clicked on Approve button!') },
-                        onDeclineButtonClick: function () { write('Clicked on Decline button!') },
                         seeMoreLink: {
                             href: '#',
                             target: '_self',
@@ -42,10 +39,7 @@
                     },
                 };
 
-                cct.initialize(options);
-
-                document.getElementById('show-box').addEventListener('click', cct.consentBox.show);
-                document.getElementById('hide-box').addEventListener('click', cct.consentBox.hide);
+                executeScript(options);
             });
         </script>
     </body>

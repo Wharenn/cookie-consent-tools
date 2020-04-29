@@ -1,4 +1,5 @@
 import boxBuilder from './box-builder';
+import cookieManager from '../cookie-manager';
 
 const defaultOptions = {
   container: 'container',
@@ -34,7 +35,8 @@ const consentBox = {
       options.messages = Object.assign(defaultOptions.messages, config.messages);
     }
 
-    if (options.autoDisplay && options.autoDisplay === true) {
+    // If no choice made and auto-display is on, show the box
+    if (!cookieManager.hasMadeChoice() && options.autoDisplay && options.autoDisplay === true) {
       this.show();
     }
   },

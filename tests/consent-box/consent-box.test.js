@@ -1,7 +1,11 @@
 import consentBox from '../../src/consent-box/consent-box';
 
+jest.mock('../../src/cookie-manager');
+const cookieManager = require('../../src/cookie-manager').default;
+
 beforeEach(() => {
   document.body.innerHTML = '<div id="container"></div>';
+  cookieManager.hasMadeChoice.mockImplementation(() => false);
 });
 
 describe('ConsentBox', () => {
