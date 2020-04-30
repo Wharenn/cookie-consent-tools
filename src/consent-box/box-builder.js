@@ -60,13 +60,17 @@ const build = (config) => {
   if (options.type === 'choice') {
     const approveButton = createButton(options.messages.approveButton);
     approveButton.classList.add('approve');
-    approveButton.addEventListener('click', options.onApproveButtonClick);
+    if (options.onApproveButtonClick) {
+      approveButton.addEventListener('click', options.onApproveButtonClick);
+    }
     approveButton.addEventListener('click', cookieManager.approve);
     approveButton.addEventListener('click', hideFunction);
 
     const declineButton = createButton(options.messages.declineButton);
     declineButton.classList.add('decline');
-    declineButton.addEventListener('click', options.onDeclineButtonClick);
+    if (options.onDeclineButtonClick) {
+      declineButton.addEventListener('click', options.onDeclineButtonClick);
+    }
     declineButton.addEventListener('click', cookieManager.decline);
     declineButton.addEventListener('click', hideFunction);
 
@@ -75,7 +79,9 @@ const build = (config) => {
   } else {
     const okButton = createButton(options.messages.okButton);
     okButton.classList.add('ok');
-    okButton.addEventListener('click', options.onOkButtonClick);
+    if (options.onOkButtonClick) {
+      okButton.addEventListener('click', options.onOkButtonClick);
+    }
     okButton.addEventListener('click', cookieManager.approve);
     okButton.addEventListener('click', hideFunction);
 

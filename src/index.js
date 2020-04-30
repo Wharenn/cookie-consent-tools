@@ -9,15 +9,21 @@ const defaultConfig = {
     secure: false,
     sameSite: 'strict',
   },
+  onConsentLoaded: undefined,
+  onConsentUpdated: undefined,
   consentBox: {},
-  onConsentLoaded: () => {},
-  onConsentUpdated: () => {},
 };
 
+let initialized = false;
 let config = {};
 
 const cookieConsentTools = {
   initialize: (options) => {
+    if (initialized === true) {
+      return;
+    }
+
+    initialized = true;
     config = Object.assign(config, defaultConfig, options);
     if (options && options.cookieAttributes) {
       config.cookieAttributes = Object.assign(defaultConfig.cookieAttributes, options.cookieAttributes);
