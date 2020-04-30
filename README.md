@@ -12,6 +12,15 @@ It provides:
 
 ![Consent Box choice](./docs/images/consent-box.png)
 
+## Installation
+
+```bash
+npm install cookie-consent-tools
+```
+```bash
+yarn add cookie-consent-tools
+```
+
 ## Usage
 
 ```javascript
