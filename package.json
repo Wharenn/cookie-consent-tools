@@ -2,7 +2,7 @@
   "name": "cookie-consent-tools",
   "version": "0.1.0",
   "description": "Set of tools to help implement user cookie consent",
-  "main": "index.js",
+  "main": "dist/cookie-consent-tools.min.js",
   "scripts": {
     "build": "webpack --env.mode=production",
     "dev": "webpack --watch --devtool eval --env.mode=development",
@@ -14,7 +14,8 @@
   },
   "keywords": [
     "cookie",
-    "consent"
+    "consent",
+    "gdpr"
   ],
   "author": "Romain Mouillard",
   "license": "MIT",
