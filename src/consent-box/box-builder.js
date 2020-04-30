@@ -1,4 +1,5 @@
 import cookieManager from '../cookie-manager';
+import '../stylesheets/index.scss';
 
 const getBoxElement = () => {
   return document.getElementById('consent-box');

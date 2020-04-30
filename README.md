@@ -28,7 +28,7 @@ yarn add cookie-consent-tools
 import cookieConsentTools from 'cookie-consent-tools';
 
 // Or get it through the window object
-var cookieConsentTools = window.cookieConsentTool;
+var cookieConsentTools = window.cookieConsentTool.default;
 
 // Initialization will look for an existing consent in the cookies
 cookieConsentTools.initialize(options);
