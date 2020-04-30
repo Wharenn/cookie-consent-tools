@@ -1,12 +1,12 @@
 #consent-box {
   background: #000;
   color: #aaa;
-  position: absolute;
   bottom: 0;
   width: 100%;
   font-size: 0.9rem;
   box-sizing: border-box;
   display: flex;
+  position: fixed;
 
   &.hidden {
     display: none;

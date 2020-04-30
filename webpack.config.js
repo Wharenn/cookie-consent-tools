@@ -7,16 +7,15 @@ module.exports = env => ({
   mode: env.mode,
   context: path.resolve(__dirname, './src'),
   entry: {
-      'cookie-consent-tools': [
-        './index.js',
-        './stylesheets/index.scss'
-      ],
+    'cookie-consent-tools': './index.js',
   },
   output: {
     path: outputPath,
     filename: '[name].min.js',
     publicPath: '/dist/',
     sourceMapFilename: '[name].map',
+    library: 'cookieConsentTools',
+    libraryTarget: 'umd',
   },
   resolve: {
     extensions: ['.js', '.json'],
