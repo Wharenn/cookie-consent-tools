@@ -2,8 +2,9 @@ import boxBuilder from './box-builder';
 import cookieManager from '../cookie-manager';
 
 const defaultOptions = {
-  container: 'container',
   autoDisplay: true,
+  container: 'container',
+  type: 'message', // or 'choice'
   messages: {
     message: 'This website uses cookies to provide you the best user experience.',
     seeMoreLabel: 'See more...',
@@ -11,16 +12,15 @@ const defaultOptions = {
     approveButton: 'Allow Cookies',
     declineButton: 'Decline',
   },
-  type: 'message', // or 'choice'
   seeMoreLink: {
     href: null,
     target: '_self',
   },
-  onOkButtonClick: () => {},
-  onApproveButtonClick: () => {},
-  onDeclineButtonClick: () => {},
-  onShow: () => {},
-  onHide: () => {},
+  onOkButtonClick: undefined,
+  onApproveButtonClick: undefined,
+  onDeclineButtonClick: undefined,
+  onShow: undefined,
+  onHide: undefined,
 };
 
 let options = {};
