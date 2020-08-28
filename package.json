@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --env.mode=production",
     "dev": "webpack --watch --devtool eval --env.mode=development",
+    "demo:start": "ws",
     "lint:js": "eslint src tests",
     "lint:scss": "stylelint src/**/*.scss",
     "test": "jest --coverage",

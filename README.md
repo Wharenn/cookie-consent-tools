@@ -77,6 +77,22 @@ See the [options documentation](./docs/options.md) to have more details about ho
 
 Cookie consent tools can be manually managed using methods. See [Cookie Manager documentation](./docs/cookie-manager.md) or [Consent Box documentation](./docs/consent-box.md) to have more details.
 
+## Executing the Demo App
+
+This library comes with a full demo. 
+
+Install `local-web-server` if you do not have it yet:
+```bash
+npm install -g local-web-server
+```
+
+Then, the demo can be started with:
+```bash
+npm run demo:start
+```
+
+And available at <http://127.0.0.1:8000/docs/demo/>
+
 ## Roadmap
 This project has to stay light, but some enhancements might be worse the case:
 
