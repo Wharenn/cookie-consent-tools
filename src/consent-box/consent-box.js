@@ -1,5 +1,5 @@
-import boxBuilder from './box-builder';
 import cookieManager from '../cookie-manager';
+import boxBuilder from './box-builder';
 
 const defaultOptions = {
   autoDisplay: true,
@@ -63,9 +63,7 @@ const consentBox = {
     }
   },
 
-  getOptions: () => {
-    return options;
-  },
+  getOptions: () => options,
 };
 
 export default consentBox;

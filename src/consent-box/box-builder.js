@@ -1,13 +1,9 @@
 import cookieManager from '../cookie-manager';
 import '../stylesheets/index.scss';
 
-const getBoxElement = () => {
-  return document.getElementById('consent-box');
-};
+const getBoxElement = () => document.getElementById('consent-box');
 
-const isBuilt = () => {
-  return getBoxElement() !== null;
-};
+const isBuilt = () => getBoxElement() !== null;
 
 const show = () => {
   getBoxElement().classList.remove('hidden');
