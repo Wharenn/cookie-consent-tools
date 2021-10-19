@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const outputPath = path.join(__dirname, '/dist');
 
-module.exports = env => ({
+module.exports = (env) => ({
   mode: env.mode,
   context: path.resolve(__dirname, './src'),
   entry: {
@@ -57,18 +57,6 @@ module.exports = env => ({
     }),
   ],
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        default: false,
-        vendors: false,
-        // vendor chunk
-        vendor: {
-          // sync + async chunks
-          chunks: 'all',
-          // import file path containing node_modules
-          test: /node_modules/,
-        },
-      },
-    },
+    splitChunks: { chunks: 'all' },
   },
 });

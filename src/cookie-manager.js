@@ -35,12 +35,8 @@ export default {
 
     triggerEvent('loaded', getCookieValue(cookieName));
   },
-  hasMadeChoice: () => {
-    return Cookies.get(cookieName) !== undefined;
-  },
-  hasConsent: () => {
-    return Cookies.get(cookieName) === 'approve';
-  },
+  hasMadeChoice: () => Cookies.get(cookieName) !== undefined,
+  hasConsent: () => Cookies.get(cookieName) === 'approve',
   resetConsent: () => {
     const { path, domain } = cookieAttributes;
 
