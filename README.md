@@ -1,7 +1,8 @@
 # Cookie Consent Tools
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/com/Wharenn/cookie-consent-tools/master.svg?style=flat-square)](https://travis-ci.com/Wharenn/cookie-consent-tools)
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![Build Status](https://github.com/Wharenn/cookie-consent-tools/actions/workflows/ci.yaml/badge.svg)]
 ![Coveralls github](https://img.shields.io/coveralls/github/Wharenn/cookie-consent-tools)
 
 Set of tools to help implement user cookie consent. [See the demo](https://wharenn.github.io/cookie-consent-tools/docs/demo/index.html)
