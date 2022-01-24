@@ -1,6 +1,6 @@
 {
   "name": "cookie-consent-tools",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Set of tools to help implement user cookie consent",
   "main": "dist/cookie-consent-tools.min.js",
   "scripts": {
