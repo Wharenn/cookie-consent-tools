@@ -43,7 +43,7 @@
     "postcss": "^8.2.5",
     "postcss-loader": "^7.0.0",
     "precss": "^4.0.0",
-    "prettier": "^2.1.1",
+    "prettier": "^3.0.2",
     "stylelint": "^13.3.2",
     "stylelint-config-standard": "^22.0.0",
     "webpack": "^5.58.2",
